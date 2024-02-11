@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomFragment"
+    android:orientation="vertical">
+
+   <androidx.appcompat.widget.Toolbar
+       android:contextClickable="true"
+       app:titleTextColor="@color/white"
+       app:menu="@menu/addmenu"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/tab_layout1"
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="?actionBarSize"
+       android:background="#005CA1"
+       android:focusable="true" />
+
+    <LinearLayout
+        android:background="#803F51B5"
+        android:orientation="horizontal"
+        android:id="@+id/tab_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/vp2_view">
+
+        <ImageView
+            android:id="@+id/btn_delet_tab"
+            android:layout_marginStart="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/vector"
+            android:layout_gravity="center_vertical"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:padding="5dp"
+            app:tabIndicatorGravity="bottom"
+            app:tabGravity="start"
+            app:tabMode="scrollable"
+            android:background="@null"
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:tabTextColor="#673AB7"
+            app:tabSelectedTextColor="#005CA1" />
+
+    </LinearLayout>
+
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        app:layout_constraintTop_toBottomOf="@id/tab_layout1"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        android:id="@+id/vp2_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="#005CA1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vp2_view"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/home"
+                android:id="@+id/btn_hom"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart"
+                android:id="@+id/btn_sev"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/info"
+                android:id="@+id/btn_info"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

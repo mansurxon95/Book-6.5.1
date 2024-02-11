@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ViewFragment"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#005CA1"
+        app:titleTextColor="@color/white"
+        app:title="Shlagbaumli temir yo'l kesishmasi"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/image"
+            android:src="@mipmap/imag2"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shlagbaumli temir yo'l kesishmasi"
+            android:textSize="18sp"
+            android:id="@+id/text_name"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ushbu yo‘l belgisi to‘suvchi qurilma bilan jihozlangan
+temir yo‘l kesishmasiga yetmasdan o‘rnatiladi va
+transport vositalari haydovchilarini oldinda to‘suvchi
+qurilma borligi haqida ogohlantiradi."
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:id="@+id/text_tavsifi"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
